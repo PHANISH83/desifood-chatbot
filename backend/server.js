@@ -192,6 +192,23 @@ function detectIntent(query) {
   // PRIORITY ORDER: Check specific intents first to avoid false matches
   // Most specific patterns first, generic patterns last
   
+  // 0. Greetings and conversational (check first for quick response)
+  if (q.match(/^(hi|hello|hey|good morning|good afternoon|good evening)$/)) {
+    return 'greeting';
+  }
+  if (q.match(/^(thank you|thanks|thx|appreciate)$/)) {
+    return 'thanks';
+  }
+  if (q.match(/^(bye|goodbye|see you|see ya)$/)) {
+    return 'bye';
+  }
+  if (q.match(/how are you|how r u|whats up|what's up|how's it going/)) {
+    return 'how_are_you';
+  }
+  if (q.match(/who are you|what are you|what is this|what can you do|^help$/)) {
+    return 'who_are_you';
+  }
+  
   // 1. Order tracking (very specific)
   if (q.match(/track|where is my order|order status|tracking number|check order/)) {
     return 'tracking';
@@ -335,6 +352,13 @@ function keywordFallback(query) {
   
   // Direct intent to KB ID mapping
   const intentToKbId = {
+    // Conversational
+    greeting: 'greeting',
+    thanks: 'thanks',
+    bye: 'bye',
+    how_are_you: 'how_are_you',
+    who_are_you: 'who_are_you',
+    
     // Customer service
     payment: 'payment_methods',
     shipping: 'shipping_time',

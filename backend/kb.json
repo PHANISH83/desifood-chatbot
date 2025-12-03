@@ -1,5 +1,66 @@
 [
   {
+    "id": "greeting",
+    "templates": [
+      "hi",
+      "hello",
+      "hey",
+      "good morning",
+      "good afternoon",
+      "good evening",
+      "hi there",
+      "hello there",
+      "greetings"
+    ],
+    "answer": "Hello! Welcome to DesiFood! 👋 I'm here to help you with Indian food products. Ask me about payment methods, shipping, product recommendations, or anything else!"
+  },
+  {
+    "id": "thanks",
+    "templates": [
+      "thank you",
+      "thanks",
+      "thank you so much",
+      "thanks a lot",
+      "appreciate it",
+      "thx"
+    ],
+    "answer": "You're welcome! Happy to help! 😊 Feel free to ask if you have any other questions."
+  },
+  {
+    "id": "bye",
+    "templates": [
+      "bye",
+      "goodbye",
+      "see you",
+      "see ya",
+      "talk to you later",
+      "gtg"
+    ],
+    "answer": "Goodbye! Thanks for chatting with DesiFood. Come back anytime! 👋"
+  },
+  {
+    "id": "how_are_you",
+    "templates": [
+      "how are you",
+      "how are you doing",
+      "how's it going",
+      "what's up",
+      "whats up"
+    ],
+    "answer": "I'm doing great, thanks for asking! 😊 I'm here to help you find the best Indian food products. What can I help you with today?"
+  },
+  {
+    "id": "who_are_you",
+    "templates": [
+      "who are you",
+      "what are you",
+      "what is this",
+      "what can you do",
+      "help"
+    ],
+    "answer": "I'm DesiFood's AI assistant! 🤖 I can help you with:\n• Product recommendations (ghee, rice, spices, etc.)\n• Shipping & delivery info\n• Payment methods\n• Returns & refunds\n• Order tracking\n• And much more!\n\nJust ask me anything!"
+  },
+  {
     "id": "payment_methods",
     "templates": [
       "what are your payment methods?",
