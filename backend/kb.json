@@ -1,0 +1,354 @@
+[
+  {
+    "id": "payment_methods",
+    "templates": [
+      "what are your payment methods?",
+      "can i pay using credit card?",
+      "what payment options do you have?",
+      "how can i pay?",
+      "do you accept paypal?",
+      "payment options",
+      "can i pay with debit card?"
+    ],
+    "answer": "We accept UPI, credit/debit cards (Visa/Mastercard/Amex), PayPal, netbanking, and Cash-on-Delivery (for eligible locations)."
+  },
+  {
+    "id": "shipping_time",
+    "templates": [
+      "how long does shipping take?",
+      "when will my order arrive?",
+      "delivery time",
+      "how many days for delivery?",
+      "shipping duration",
+      "how fast is delivery?"
+    ],
+    "answer": "Standard international shipping takes 7-14 business days. Express shipping (3-5 days) is available for select countries. Domestic orders arrive within 2-5 business days."
+  },
+  {
+    "id": "shipping_cost",
+    "templates": [
+      "what is the shipping cost?",
+      "how much is delivery?",
+      "shipping charges",
+      "delivery fee",
+      "is shipping free?",
+      "do you charge for delivery?"
+    ],
+    "answer": "Shipping costs vary by location and order weight. Free shipping on orders above $50 for domestic, $100 for international. Exact charges shown at checkout."
+  },
+  {
+    "id": "custom_duty",
+    "templates": [
+      "do i need to pay custom duty?",
+      "customs charges",
+      "import tax",
+      "will i be charged customs?",
+      "custom fees",
+      "duty charges"
+    ],
+    "answer": "No, you don't need to pay any custom duty! We handle all customs clearance and there are no additional charges on any product or order."
+  },
+  {
+    "id": "return_policy",
+    "templates": [
+      "what is your return policy?",
+      "can i return products?",
+      "how to return?",
+      "refund policy",
+      "is returns allowed?",
+      "can i get refund?"
+    ],
+    "answer": "Yes, returns are accepted within 7 days of delivery for unopened products. Perishable items cannot be returned. Contact support@desifood.com with your order number for return authorization."
+  },
+  {
+    "id": "defective_product",
+    "templates": [
+      "what if i receive a defective product?",
+      "damaged item received",
+      "broken product",
+      "product quality issue",
+      "received expired product",
+      "item is damaged"
+    ],
+    "answer": "We apologize for any defective products! Please email us photos within 48 hours at support@desifood.com. We'll send a replacement immediately or issue a full refund."
+  },
+  {
+    "id": "order_tracking",
+    "templates": [
+      "how to track my order?",
+      "where is my order?",
+      "track order",
+      "order status",
+      "tracking number",
+      "check order"
+    ],
+    "answer": "You'll receive a tracking number via email once your order ships. Track it on our website or the courier's site. For help, provide your order ID."
+  },
+  {
+    "id": "cancel_order",
+    "templates": [
+      "can i cancel my order?",
+      "how to cancel order?",
+      "cancel order",
+      "want to cancel",
+      "stop my order"
+    ],
+    "answer": "Orders can be cancelled within 2 hours of placement. After that, they're processed and cannot be cancelled. Contact us immediately at support@desifood.com with your order number."
+  },
+  {
+    "id": "product_availability",
+    "templates": [
+      "is this product available?",
+      "out of stock",
+      "when will it be back?",
+      "product availability",
+      "do you have this item?",
+      "stock status"
+    ],
+    "answer": "Product availability is shown on each item page. Out-of-stock items are restocked weekly. Subscribe to notifications or check back in 3-5 days."
+  },
+  {
+    "id": "bulk_order",
+    "templates": [
+      "can i order in bulk?",
+      "wholesale prices",
+      "bulk discount",
+      "large quantity order",
+      "business order"
+    ],
+    "answer": "Yes! We offer bulk discounts for orders over 50 items. Contact wholesale@desifood.com with your requirements for special pricing."
+  },
+  {
+    "id": "ghee_brand_good",
+    "templates": [
+      "which brand is good for ghee?",
+      "best ghee brand",
+      "recommend a ghee brand",
+      "good ghee brand",
+      "which ghee should i buy?",
+      "top ghee brands"
+    ],
+    "answer": "Top ghee brands: Amul (most popular), Nandini, Mother Dairy, Patanjali, and Gowardhan. For organic options, try Organic India or Vedaka."
+  },
+  {
+    "id": "rice_brand_good",
+    "templates": [
+      "which brand is good for rice?",
+      "best rice brand",
+      "recommend rice brand",
+      "good basmati rice",
+      "which rice to buy?",
+      "top rice brands"
+    ],
+    "answer": "Top rice brands: India Gate (Classic & Dubar), Daawat, Kohinoor, Fortune, and Lal Qilla. For premium basmati, choose India Gate Dubar or Daawat Rozana."
+  },
+  {
+    "id": "atta_brand_good",
+    "templates": [
+      "which brand is good for atta?",
+      "best atta brand",
+      "recommend atta brand",
+      "good wheat flour",
+      "which atta to buy?",
+      "top atta brands"
+    ],
+    "answer": "Top atta brands: Aashirvaad (most popular), Pillsbury, Annapurna, Nature Fresh, and Shakti Bhog. For whole wheat, Aashirvaad Select is excellent."
+  },
+  {
+    "id": "dal_brand_good",
+    "templates": [
+      "which brand is good for dal?",
+      "best dal brand",
+      "recommend dal brand",
+      "good pulses",
+      "which dal to buy?",
+      "top dal brands"
+    ],
+    "answer": "Top dal/pulses brands: Tata Sampann, Aashirvaad, Fortune, Organic India, and Vedaka. Tata Sampann offers excellent quality and variety."
+  },
+  {
+    "id": "oil_brand_good",
+    "templates": [
+      "which brand is good for oil?",
+      "best cooking oil brand",
+      "recommend oil brand",
+      "good cooking oil",
+      "which oil to buy?",
+      "top oil brands"
+    ],
+    "answer": "Top cooking oil brands: Fortune, Sundrop, Saffola (heart-healthy), Dhara, and Gemini. For mustard oil: KS Oils or Patanjali."
+  },
+  {
+    "id": "spices_brand_good",
+    "templates": [
+      "which brand is good for spices?",
+      "best spice brand",
+      "recommend spice brand",
+      "good masala brand",
+      "which spices to buy?",
+      "top spice brands"
+    ],
+    "answer": "Top spice brands: MDH, Everest, Catch, Tata Sampann, and Patanjali. For authentic taste, MDH and Everest are most trusted."
+  },
+  {
+    "id": "tea_brand_good",
+    "templates": [
+      "which brand is good for tea?",
+      "best tea brand",
+      "recommend tea brand",
+      "good chai",
+      "which tea to buy?",
+      "top tea brands"
+    ],
+    "answer": "Top tea brands: Tata Tea (Gold & Premium), Taj Mahal, Red Label, Society Tea, and Wagh Bakri. For premium: Tata Tea Gold or Taj Mahal."
+  },
+  {
+    "id": "snacks_brand_good",
+    "templates": [
+      "which brand is good for snacks?",
+      "best snack brand",
+      "recommend snacks",
+      "good namkeen brand",
+      "which snacks to buy?",
+      "top snack brands"
+    ],
+    "answer": "Top snack brands: Haldiram's (most popular), Bikaji, Balaji, Kurkure, and Bingo. For traditional namkeen, Haldiram's is the best choice."
+  },
+  {
+    "id": "pickle_brand_good",
+    "templates": [
+      "which brand is good for pickle?",
+      "best pickle brand",
+      "recommend pickle brand",
+      "good achar brand",
+      "which pickle to buy?",
+      "top pickle brands"
+    ],
+    "answer": "Top pickle brands: Priya, Mother's Recipe, Nilon's, Patanjali, and Ashoka. For authentic South Indian pickles, Priya is excellent."
+  },
+  {
+    "id": "countries_shipping",
+    "templates": [
+      "which countries do you ship to?",
+      "do you ship to USA?",
+      "international shipping",
+      "do you deliver to UK?",
+      "shipping locations",
+      "where do you deliver?"
+    ],
+    "answer": "We ship to USA, Canada, UK, Australia, UAE, Singapore, Germany, and 50+ other countries. Check availability at checkout by entering your postal code."
+  },
+  {
+    "id": "product_expiry",
+    "templates": [
+      "what is the expiry date?",
+      "how long does it last?",
+      "shelf life",
+      "product freshness",
+      "expiration date",
+      "how fresh are products?"
+    ],
+    "answer": "All products have minimum 6 months shelf life from delivery date. Exact expiry dates are printed on packaging. We guarantee fresh products with proper storage instructions."
+  },
+  {
+    "id": "packaging_quality",
+    "templates": [
+      "how is packaging done?",
+      "is packaging secure?",
+      "will products break?",
+      "packaging quality",
+      "safe delivery"
+    ],
+    "answer": "We use premium bubble wrap, foam padding, and sturdy boxes for international shipping. Fragile items get extra protection. 99.5% of orders arrive intact."
+  },
+  {
+    "id": "minimum_order",
+    "templates": [
+      "what is minimum order?",
+      "minimum purchase amount",
+      "can i order one item?",
+      "minimum order value",
+      "small order"
+    ],
+    "answer": "No minimum order requirement! Order as little as one item. However, orders above $50 qualify for free domestic shipping and $100 for international."
+  },
+  {
+    "id": "customer_support",
+    "templates": [
+      "how to contact support?",
+      "customer service",
+      "help needed",
+      "contact number",
+      "email support",
+      "talk to someone"
+    ],
+    "answer": "Contact us at support@desifood.com or WhatsApp +1-XXX-XXX-XXXX. Live chat available 9 AM - 9 PM IST. We respond within 2 hours."
+  },
+  {
+    "id": "account_creation",
+    "templates": [
+      "do i need an account?",
+      "create account",
+      "sign up required?",
+      "guest checkout",
+      "register"
+    ],
+    "answer": "No account needed! Checkout as guest. However, creating an account lets you track orders, save addresses, and get exclusive deals."
+  },
+  {
+    "id": "discount_coupons",
+    "templates": [
+      "do you have discount codes?",
+      "coupon codes",
+      "promo codes",
+      "any offers?",
+      "discounts available?",
+      "sale"
+    ],
+    "answer": "Yes! Use code FIRST10 for 10% off your first order. Subscribe to our newsletter for exclusive deals. Check our Offers page for current promotions."
+  },
+  {
+    "id": "organic_products",
+    "templates": [
+      "do you have organic products?",
+      "organic food",
+      "chemical free products",
+      "natural products",
+      "organic options"
+    ],
+    "answer": "Yes! We have a dedicated organic section with brands like Organic India, 24 Mantra, and Conscious Food. Filter by 'Organic' on our website."
+  },
+  {
+    "id": "halal_products",
+    "templates": [
+      "are products halal?",
+      "halal certified",
+      "muslim friendly",
+      "halal meat",
+      "halal food"
+    ],
+    "answer": "Yes, we clearly mark halal-certified products. Most spices, grains, and vegetarian items are naturally halal. Check product descriptions for certification details."
+  },
+  {
+    "id": "vegan_products",
+    "templates": [
+      "do you have vegan products?",
+      "vegan food",
+      "plant based",
+      "no dairy products",
+      "vegan options"
+    ],
+    "answer": "Yes! Filter by 'Vegan' on our website. Most dals, rice, spices, and many snacks are vegan. We clearly label all ingredients."
+  },
+  {
+    "id": "gluten_free",
+    "templates": [
+      "do you have gluten free products?",
+      "gluten free food",
+      "no wheat products",
+      "celiac friendly",
+      "gluten free options"
+    ],
+    "answer": "Yes! We have gluten-free rice, millets, gluten-free atta, and snacks. Filter by 'Gluten-Free' or check product labels for certification."
+  }
+]
