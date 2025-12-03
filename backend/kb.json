@@ -192,6 +192,17 @@
     "answer": "Top ghee brands: Amul (most popular), Nandini, Mother Dairy, Patanjali, and Gowardhan. For organic options, try Organic India or Vedaka."
   },
   {
+    "id": "ghee_brand_bad",
+    "templates": [
+      "which brand is bad for ghee?",
+      "worst ghee brand",
+      "bad ghee brands",
+      "avoid ghee brand",
+      "which ghee should i avoid?"
+    ],
+    "answer": "Avoid brands with unclear ingredient lists, artificial colors, or preservatives. Stay away from brands that mix vegetable oils with ghee. Always check for 100% pure ghee certification. Stick with trusted brands like Amul, Nandini, or Mother Dairy for quality assurance."
+  },
+  {
     "id": "rice_brand_good",
     "templates": [
       "which brand is good for rice?",
@@ -204,6 +215,16 @@
     "answer": "Top rice brands: India Gate (Classic & Dubar), Daawat, Kohinoor, Fortune, and Lal Qilla. For premium basmati, choose India Gate Dubar or Daawat Rozana."
   },
   {
+    "id": "rice_brand_bad",
+    "templates": [
+      "which brand is bad for rice?",
+      "worst rice brand",
+      "bad rice brands",
+      "avoid rice brand"
+    ],
+    "answer": "Avoid unbranded or loose rice with unclear origin. Stay away from brands with broken grains, stones, or impurities. Always buy from trusted brands like India Gate, Daawat, or Kohinoor for quality and cleanliness."
+  },
+  {
     "id": "atta_brand_good",
     "templates": [
       "which brand is good for atta?",
@@ -214,6 +235,16 @@
       "top atta brands"
     ],
     "answer": "Top atta brands: Aashirvaad (most popular), Pillsbury, Annapurna, Nature Fresh, and Shakti Bhog. For whole wheat, Aashirvaad Select is excellent."
+  },
+  {
+    "id": "atta_brand_bad",
+    "templates": [
+      "which brand is bad for atta?",
+      "worst atta brand",
+      "bad atta brands",
+      "avoid atta brand"
+    ],
+    "answer": "Avoid atta with added maida (refined flour), bleaching agents, or preservatives. Stay away from brands with unclear milling dates or storage conditions. Stick with trusted brands like Aashirvaad or Pillsbury for pure whole wheat."
   },
   {
     "id": "dal_brand_good",

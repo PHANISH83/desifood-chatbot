@@ -304,15 +304,28 @@ function detectIntent(query) {
   }
   
   // 18. Product brand recommendations (check product type + recommendation intent)
+  // Check for BAD/AVOID questions first
+  if (q.match(/ghee/) && q.match(/bad|worst|avoid|poor|terrible|not good|should.*avoid/)) {
+    return 'ghee_bad';
+  }
   if (q.match(/ghee/) && q.match(/good|best|recommend|which|top|should.*buy|suggest/)) {
     return 'ghee';
+  }
+  // Check bad brands for other products
+  if (q.match(/rice|basmati/) && q.match(/bad|worst|avoid|poor|terrible|not good|should.*avoid/)) {
+    return 'rice_bad';
   }
   if (q.match(/rice|basmati/) && q.match(/good|best|recommend|which|top|should.*buy|suggest/)) {
     return 'rice';
   }
+  
+  if (q.match(/atta|flour|wheat/) && q.match(/bad|worst|avoid|poor|terrible|not good|should.*avoid/)) {
+    return 'atta_bad';
+  }
   if (q.match(/atta|flour|wheat/) && q.match(/good|best|recommend|which|top|should.*buy|suggest/)) {
     return 'atta';
   }
+  
   if (q.match(/dal|pulses|lentils/) && q.match(/good|best|recommend|which|top|should.*buy|suggest/)) {
     return 'dal';
   }
@@ -390,8 +403,11 @@ function keywordFallback(query) {
     
     // Product recommendations
     ghee: 'ghee_brand_good',
+    ghee_bad: 'ghee_brand_bad',
     rice: 'rice_brand_good',
+    rice_bad: 'rice_brand_bad',
     atta: 'atta_brand_good',
+    atta_bad: 'atta_brand_bad',
     dal: 'dal_brand_good',
     oil: 'oil_brand_good',
     spices: 'spices_brand_good',
