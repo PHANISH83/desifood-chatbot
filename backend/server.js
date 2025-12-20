@@ -438,8 +438,17 @@ function keywordFallback(query) {
 
 // endpoints
 app.post('/api/chat', async (req, res) => {
-  const { message } = req.body;
+  const { message, conversationHistory } = req.body;
   if (!message) return res.status(400).json({ error: 'message required' });
+  
+  const q = normalize(message);
+  
+  // 0) Check for negative intent first
+  if (q.match(/\b(don't|dont|not|no|never)\b/) && q.match(/want|need|interested|like/)) {
+    return res.json({ 
+      reply: "No problem! Let me know if you need help with anything else. I can assist with shipping, payments, returns, or product recommendations." 
+    });
+  }
   
   // 1) Order intent
   const orderInfo = detectOrderIntent(message);
@@ -454,13 +463,56 @@ app.post('/api/chat', async (req, res) => {
     }
   }
   
-  // 2) deterministic keyword fallback
+  // 2) Price questions
+  if (q.match(/price|cost|how much|expensive|cheap/) && q.match(/ghee|rice|atta|dal|oil|spice|tea|product/)) {
+    const product = q.match(/ghee/) ? 'ghee' : q.match(/rice/) ? 'rice' : q.match(/atta/) ? 'atta' : 'products';
+    return res.json({
+      reply: `Prices vary by brand and quantity. Please visit our website or app to see current prices for ${product}. We offer competitive pricing and regular discounts!`
+    });
+  }
+  
+  // 3) Quantity/weight questions
+  if (q.match(/how much|how many|quantity|kg|kilogram|gram|liter/) && q.match(/order|buy|purchase/)) {
+    return res.json({
+      reply: "You can order any quantity from 100g to 50kg per item. For bulk orders above 50kg, contact wholesale@desifood.com for special pricing."
+    });
+  }
+  
+  // 4) Delivery date calculation
+  if (q.match(/when.*arrive|delivery date|get.*order|receive.*order/) && q.match(/today|tomorrow|order today/)) {
+    const today = new Date();
+    const minDays = 7;
+    const maxDays = 14;
+    const minDate = new Date(today.getTime() + minDays * 24 * 60 * 60 * 1000);
+    const maxDate = new Date(today.getTime() + maxDays * 24 * 60 * 60 * 1000);
+    const formatDate = (d) => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    return res.json({
+      reply: `If you order today, your package should arrive between ${formatDate(minDate)} and ${formatDate(maxDate)} (7-14 business days). Express shipping available for 3-5 days delivery!`
+    });
+  }
+  
+  // 5) Brand comparison questions
+  if (q.match(/better|compare|difference|vs|versus/) && q.match(/amul|nandini|india gate|daawat|aashirvaad|pillsbury/)) {
+    return res.json({
+      reply: "Both brands are excellent! The choice depends on your preference:\n• Amul/India Gate/Aashirvaad - Most popular, widely available, consistent quality\n• Nandini/Daawat/Pillsbury - Great quality, slightly different taste profile\n\nBoth are trusted brands. Try both and see which you prefer!"
+    });
+  }
+  
+  // 6) Multiple questions detection (split by "and", "also", "plus")
+  if (q.match(/\band\b.*\?|\balso\b.*\?/) || (message.match(/\?/g) || []).length > 1) {
+    // Split into parts and answer first question, suggest asking others separately
+    return res.json({
+      reply: "I see you have multiple questions! Let me help you one at a time for better answers. Please ask your first question, then I'll answer the next one. 😊"
+    });
+  }
+  
+  // 7) deterministic keyword fallback
   const direct = keywordFallback(message);
   if (direct) {
     return res.json({ reply: direct.answer, matched: direct.id });
   }
   
-  // 3) TF-IDF + combined scorer
+  // 8) TF-IDF + combined scorer
   const match = findBestMatch(message);
   const THRESH = 0.44;
   if (match && match.combined >= THRESH) {
@@ -477,7 +529,7 @@ app.post('/api/chat', async (req, res) => {
     }
   }
   
-  // fallback
+  // fallback with conversation memory hint
   const fallbackMessages = [
     "I'm not sure about that yet. Try asking: 'What payment methods?', 'Best ghee brand?', 'Shipping time?', or 'Return policy?'",
     "Hmm, I don't have that info right now. You can ask me about products, shipping, payments, or returns!",

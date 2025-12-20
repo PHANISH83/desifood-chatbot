@@ -217,6 +217,9 @@
     const quickRepliesDiv = document.getElementById('quickReplies');
     const starterQuestionsDiv = document.getElementById('starterQuestions');
 
+    // Conversation history for context
+    let conversationHistory = [];
+
     // Popular starter questions
     const starterQuestions = [
       "What payment methods?",
@@ -314,6 +317,10 @@
       // Apply spell correction
       const correctedMessage = correctSpelling(message);
       
+      // Add to conversation history
+      conversationHistory.push({ role: 'user', message: correctedMessage });
+      if (conversationHistory.length > 10) conversationHistory.shift(); // Keep last 10 messages
+      
       addMessage(message, true);
       userInput.value = '';
       
@@ -330,7 +337,10 @@
         const response = await fetch(`${API_URL}/api/chat`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: correctedMessage })
+          body: JSON.stringify({ 
+            message: correctedMessage,
+            conversationHistory: conversationHistory 
+          })
         });
         
         clearTimeout(timeoutWarning);
@@ -341,7 +351,12 @@
         }
         
         const data = await response.json();
-        addMessage(data.reply || 'Sorry, something went wrong. Please try again.', false);
+        const botReply = data.reply || 'Sorry, something went wrong. Please try again.';
+        
+        // Add bot response to history
+        conversationHistory.push({ role: 'bot', message: botReply });
+        
+        addMessage(botReply, false);
         
       } catch (error) {
         removeTyping();

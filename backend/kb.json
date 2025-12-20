@@ -319,6 +319,48 @@
     "answer": "Top pickle brands: Priya, Mother's Recipe, Nilon's, Patanjali, and Ashoka. For authentic South Indian pickles, Priya is excellent."
   },
   {
+    "id": "product_prices",
+    "templates": [
+      "how much does ghee cost?",
+      "price of rice?",
+      "how expensive is atta?",
+      "product prices",
+      "cost of products"
+    ],
+    "answer": "Prices vary by brand and quantity. Please visit our website or app to see current prices. We offer competitive pricing and regular discounts!"
+  },
+  {
+    "id": "order_quantity",
+    "templates": [
+      "how much can i order?",
+      "minimum quantity",
+      "maximum order",
+      "how many kg can i buy?",
+      "order limits"
+    ],
+    "answer": "You can order any quantity from 100g to 50kg per item. For bulk orders above 50kg, contact wholesale@desifood.com for special pricing."
+  },
+  {
+    "id": "delivery_date",
+    "templates": [
+      "when will my order arrive?",
+      "delivery date",
+      "estimated delivery",
+      "when will i receive my order?"
+    ],
+    "answer": "Standard shipping takes 7-14 business days. Express shipping takes 3-5 days. You'll receive tracking info once your order ships!"
+  },
+  {
+    "id": "brand_comparison",
+    "templates": [
+      "which is better amul or nandini?",
+      "compare brands",
+      "difference between brands",
+      "amul vs nandini"
+    ],
+    "answer": "Both brands are excellent! The choice depends on your preference. Most popular brands like Amul, India Gate, and Aashirvaad offer consistent quality. Try both and see which you prefer!"
+  },
+  {
     "id": "countries_shipping",
     "templates": [
       "which countries do you ship to?",
