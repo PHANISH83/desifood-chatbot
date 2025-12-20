@@ -466,7 +466,14 @@ app.post('/api/chat', async (req, res) => {
   }
   
   // fallback
-  res.json({ reply: "Sorry, I don't have a matching answer right now. Try: 'Which brand is good for ghee?', 'What payment methods?', or 'Where is my order ORD123'." });
+  const fallbackMessages = [
+    "I'm not sure about that yet. Try asking: 'What payment methods?', 'Best ghee brand?', 'Shipping time?', or 'Return policy?'",
+    "Hmm, I don't have that info right now. You can ask me about products, shipping, payments, or returns!",
+    "I'm still learning! Ask me about: payment methods, product brands, shipping details, or order tracking.",
+    "Sorry, I couldn't find an answer. Try: 'Which brand is good for rice?', 'Do I need to pay custom duty?', or 'How to contact support?'"
+  ];
+  const randomFallback = fallbackMessages[Math.floor(Math.random() * fallbackMessages.length)];
+  res.json({ reply: randomFallback });
 });
 
 // KB endpoints protected by KB_ADMIN_KEY header
