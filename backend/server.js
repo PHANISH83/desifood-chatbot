@@ -244,7 +244,17 @@ function detectIntent(query) {
     return 'shipping';
   }
   
-  // 8. Countries/locations
+  // 8. Countries/locations (check BEFORE general shipping)
+  if (q.match(/america|usa|united states|us\b/)) {
+    if (q.match(/ship|deliver|available|get.*product|send/)) {
+      return 'ship_to_usa';
+    }
+  }
+  if (q.match(/canada|uk|united kingdom|australia|germany|singapore|uae|dubai/)) {
+    if (q.match(/ship|deliver|available|get.*product|send/)) {
+      return 'ship_to_country';
+    }
+  }
   if (q.match(/which countries|ship to|deliver to|international|do you ship|shipping locations/)) {
     return 'countries';
   }
@@ -386,6 +396,8 @@ function keywordFallback(query) {
     availability: 'product_availability',
     bulk: 'bulk_order',
     countries: 'countries_shipping',
+    ship_to_usa: 'ship_to_usa',
+    ship_to_country: 'ship_to_country',
     expiry: 'product_expiry',
     packaging: 'packaging_quality',
     minimum: 'minimum_order',

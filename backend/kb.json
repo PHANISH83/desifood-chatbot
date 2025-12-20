@@ -331,6 +331,27 @@
     "answer": "We ship to USA, Canada, UK, Australia, UAE, Singapore, Germany, and 50+ other countries. Check availability at checkout by entering your postal code."
   },
   {
+    "id": "ship_to_usa",
+    "templates": [
+      "do you ship to america?",
+      "do you deliver to usa?",
+      "can i get products in america?",
+      "shipping to united states?",
+      "available in usa?"
+    ],
+    "answer": "Yes! We ship to all 50 US states. Shipping takes 7-14 days (standard) or 3-5 days (express). Free shipping on orders over $100. No custom duty charges!"
+  },
+  {
+    "id": "ship_to_country",
+    "templates": [
+      "do you ship to canada?",
+      "do you deliver to uk?",
+      "shipping to australia?",
+      "available in germany?"
+    ],
+    "answer": "Yes! We ship to Canada, UK, Australia, UAE, Singapore, Germany, and many other countries. Shipping takes 7-14 days. Free shipping on orders over $100. No custom duty charges!"
+  },
+  {
     "id": "product_expiry",
     "templates": [
       "what is the expiry date?",

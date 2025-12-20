@@ -320,12 +320,20 @@
       showTyping();
 
       try {
+        // Add timeout warning for slow responses
+        const timeoutWarning = setTimeout(() => {
+          removeTyping();
+          addMessage('Server is waking up... This takes ~30 seconds on first request. ⏳', false);
+          showTyping();
+        }, 5000);
+
         const response = await fetch(`${API_URL}/api/chat`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ message: correctedMessage })
         });
         
+        clearTimeout(timeoutWarning);
         removeTyping();
         
         if (!response.ok) {
