@@ -189,7 +189,8 @@
       "which ghee should i buy?",
       "top ghee brands"
     ],
-    "answer": "Top ghee brands: Amul (most popular), Nandini, Mother Dairy, Patanjali, and Gowardhan. For organic options, try Organic India or Vedaka."
+    "answer": "Top ghee brands: Amul (most popular), Nandini, Mother Dairy, Patanjali, Gowardhan, and Vedaka. For organic options, try Organic India or Vedaka.",
+    "brands": ["amul", "nandini", "mother dairy", "patanjali", "gowardhan", "vedaka", "organic india"]
   },
   {
     "id": "ghee_brand_bad",
@@ -256,7 +257,8 @@
       "which dal to buy?",
       "top dal brands"
     ],
-    "answer": "Top dal/pulses brands: Tata Sampann, Aashirvaad, Fortune, Organic India, and Vedaka. Tata Sampann offers excellent quality and variety."
+    "answer": "Top dal/pulses brands: Tata Sampann, Aashirvaad, Fortune, Organic India, and Vedaka. Tata Sampann offers excellent quality and variety.",
+    "brands": ["tata sampann", "aashirvaad", "fortune", "organic india", "vedaka"]
   },
   {
     "id": "oil_brand_good",

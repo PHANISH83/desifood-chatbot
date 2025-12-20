@@ -443,7 +443,30 @@ app.post('/api/chat', async (req, res) => {
   
   const q = normalize(message);
   
-  // 0) Check for negative intent first
+  // 0) Specific brand inquiry (check first for context)
+  const brandNames = ['amul', 'nandini', 'mother dairy', 'patanjali', 'vedaka', 'india gate', 'daawat', 
+                      'kohinoor', 'fortune', 'aashirvaad', 'pillsbury', 'tata sampann', 'organic india',
+                      'saffola', 'sundrop', 'dhara', 'mdh', 'everest', 'haldirams', 'haldiram'];
+  
+  const mentionedBrand = brandNames.find(brand => q.includes(brand));
+  
+  if (mentionedBrand && q.match(/why|good|benefit|should.*buy|tell me about|what about|recommend/)) {
+    const brandResponses = {
+      'vedaka': 'Vedaka is Amazon\'s private label brand offering good quality products at competitive prices. Known for organic options and value for money. Great choice for dal, ghee, and spices!',
+      'amul': 'Amul is India\'s most trusted dairy brand. Known for pure, high-quality ghee and dairy products. Government-backed cooperative with consistent quality.',
+      'tata sampann': 'Tata Sampann offers premium quality pulses, spices, and staples. Known for rigorous quality checks and freshness. Excellent choice for dal and spices.',
+      'aashirvaad': 'Aashirvaad (by ITC) is India\'s #1 atta brand. Known for 100% whole wheat with no maida. Also offers quality dal and spices.',
+      'organic india': 'Organic India specializes in certified organic products. Chemical-free, sustainable farming. Premium choice for health-conscious customers.',
+      'india gate': 'India Gate is the leading basmati rice brand. Known for long grains, authentic aroma, and premium quality. Dubar variety is highly recommended.'
+    };
+    
+    const response = brandResponses[mentionedBrand] || 
+      `${mentionedBrand.charAt(0).toUpperCase() + mentionedBrand.slice(1)} is a trusted brand available on DesiFood. Known for quality products at good prices. Would you like to know about specific products from this brand?`;
+    
+    return res.json({ reply: response });
+  }
+  
+  // 0.1) Check for negative intent
   if (q.match(/\b(don't|dont|not|no|never)\b/) && q.match(/want|need|interested|like/)) {
     return res.json({ 
       reply: "No problem! Let me know if you need help with anything else. I can assist with shipping, payments, returns, or product recommendations." 
