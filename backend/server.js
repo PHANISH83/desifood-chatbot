@@ -209,6 +209,14 @@ function detectIntent(query) {
     return 'who_are_you';
   }
   
+  // 0.5. Specific brand questions (before general product questions)
+  if (q.match(/vedaka/) && q.match(/what|tell|about|why|good|quality|should.*buy/)) {
+    return 'vedaka_brand';
+  }
+  if (q.match(/amul/) && q.match(/what|tell|about|why|good|quality|should.*buy/)) {
+    return 'amul_brand';
+  }
+  
   // 1. Order tracking (very specific)
   if (q.match(/track|where is my order|order status|tracking number|check order/)) {
     return 'tracking';
@@ -381,6 +389,10 @@ function keywordFallback(query) {
     bye: 'bye',
     how_are_you: 'how_are_you',
     who_are_you: 'who_are_you',
+    
+    // Specific brands
+    vedaka_brand: 'vedaka_brand',
+    amul_brand: 'amul_brand',
     
     // Customer service
     payment: 'payment_methods',

@@ -180,6 +180,30 @@
     "answer": "Yes! We offer bulk discounts for orders over 50 items. Contact wholesale@desifood.com with your requirements for special pricing."
   },
   {
+    "id": "amul_brand",
+    "templates": [
+      "what is amul?",
+      "tell me about amul",
+      "amul brand",
+      "why should i buy amul?",
+      "is amul good?",
+      "amul quality"
+    ],
+    "answer": "Amul is India's most trusted dairy brand, founded in 1946. Known for excellent quality ghee, butter, milk, and dairy products. Benefits: Consistent quality, widely available, cooperative model supports farmers, great taste. Amul ghee is the #1 choice for most Indian households!"
+  },
+  {
+    "id": "vedaka_brand",
+    "templates": [
+      "what is vedaka?",
+      "tell me about vedaka",
+      "vedaka brand",
+      "why should i buy vedaka?",
+      "is vedaka good?",
+      "vedaka quality"
+    ],
+    "answer": "Vedaka is Amazon's private label brand for Indian groceries. It offers good quality products at competitive prices. Popular for ghee, dal, rice, and spices. Benefits: Quality-tested, affordable, convenient delivery with Amazon Prime. Good choice for everyday cooking!"
+  },
+  {
     "id": "ghee_brand_good",
     "templates": [
       "which brand is good for ghee?",
